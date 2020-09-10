@@ -1,0 +1,60 @@
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<link type="text/css" rel="stylesheet" href="/css/details.css">
+<html>
+<body>
+<div id="main-container">
+    <form action="/goBack" method="get">
+        <input type="submit" value="go back">
+    </form>
+<div id="image-container"><img src="/uploads/<%= fileName %>"></div>
+<div id="thumbUp" class="clearfix">
+    <button id="btn" class="pull-left" onclick="thumbUp()"></button>
+    <div class="pull-right" id="thumb"> <%= thumb %> like</div>
+</div>
+
+<div id="allComment-container"><% for (var key in com) { %>
+
+
+       <div id="comment-container"><span class="name">
+               <%= com[key].user%>
+           </span>
+           <span class="comment">
+               <%= com[key].comment%>
+           </span>
+           <span class="time">
+               at <%= com[key].date %>
+           </span>
+       </div>
+
+
+  <% } %>
+</div>
+    <div id="comment-box">
+<textarea name="comment" form="com" style="width:400px;height:100px"></textarea>
+<form action="/comment" method="post" id="com">
+  <input type="submit" value="submit">
+</form>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+    function thumbUp(){
+        $.ajax(
+            {
+                type:"get",
+                url:"/thumbUp",
+                success: function (result){
+                    console.log("E "+result);
+                    var like = result[0]["thumb"];
+                    $("#thumb").html(" "+like +" like");
+                }
+            }
+        )
+    }
+</script>

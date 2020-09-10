@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="/css/homePage.css">
+<html>
+<body>
+<nav id="profile-header" class="clearfix">
+<div id="profile-header-content" class="pull-left">
+<span>Hello <%=visitor%>, you can upload image </span>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="myimage">
+    <input type="submit">
+</form>
+</div>
+<a id="logOut"class="pull-right" href="logout"><input type="button" value="logout"></a>
+</nav>
+<div class="main-container">
+    <% for(var key in imgDB) { var num =0; var thumb=0;%>
+    <div class="container"><div class="image-container"><a href="http://localhost:8081/image/<%= imgDB[key].file%>">
+                <img class="image" src="/uploads/<%= imgDB[key].file%>" ></a></div>
+        <% for (var i in ctnDB) {
+            if(imgDB[key].file ===ctnDB[i].file){
+                num++; } %>
+        <%}%>
+        <% for (var y in likes) {
+            if(imgDB[key].file ===likes[y].file){
+                thumb = likes[y].thumb; } %>
+        <%}%>
+        <div class="img-content clearfix">
+            <span class="pull-left"> From <%= imgDB[key].user%></span>
+            <span class="pull-right"><%= num %> Comments
+                        <%= thumb%> Likes </span>
+        </div>
+
+    </div>
+    <%}%>
+</div>
+</body>
+</html>

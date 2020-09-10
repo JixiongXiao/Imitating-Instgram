@@ -1,0 +1,72 @@
+#main-container{
+    margin:100px auto;
+    width:1100px;
+    /*text-align:center;*/
+    /*border:1px red solid;*/
+}
+#image-container{
+    margin-bottom: 20px;
+    width:1100px;
+    /*border:1px red solid;*/
+    text-align:center;
+}
+#comment-container{
+    width:800px;
+    /*border:1px solid red;*/
+    margin:30px auto 10px;
+
+}
+
+.name{
+    margin-left:200px;
+    width:100px;
+    display:block;
+    font-size:13px;
+    color:gray;
+}
+.time{
+    /*border-bottom:1px solid gold;*/
+    width:400px;
+    margin-left:200px;
+    display:block;
+    font-size:10px;
+    color:gray;
+}
+.comment{
+    width:500px;
+    display:block;
+    font-size:15px;
+    margin:5px 0px 10px 200px;
+}
+#comment-box{
+    width:1100px;
+    text-align:center;
+}
+#btn{
+    background:url("../img/thumbUp.png") no-repeat;
+    width:28px;
+    height:28px;
+    border:1px white solid;
+    display:inline-block;
+    margin-top:10px;
+    margin-left:510px;
+}
+#btn:hover{
+    background:url("../img/thumbUpA.png") no-repeat;
+}
+#thumbUp{
+    height:50px;
+    width:1100px;
+    position:relative;
+}
+#thumb{
+    display:inline-block;
+    width:50px;
+    height:20px;
+    /*text-align:center;*/
+    font-size:13px;
+    color:gray;
+    margin-top:15px;
+    margin-left:10px;
+    position:absolute;
+}

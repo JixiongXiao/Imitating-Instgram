@@ -1,0 +1,32 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+<link rel="stylesheet" type="text/css" href="/css/homePage.css">
+
+<html>
+<body>
+<nav id="home-header">
+        <div id="header-content">HI Visitor Please
+        <a href="logIn.html">Log In</a> Or
+        <a href="signUp.html">Sign Up</a></div></nav>
+<div class="main-container">
+    <% for(var key in imgDB) { var num =0; var thumb=0;%>
+        <div class="container"><div class="image-container"><a href="http://localhost:8081/image/<%= imgDB[key].file%>">
+                <img class="image" src="/uploads/<%= imgDB[key].file%>" ></a></div>
+                <% for (var i in ctnDB) {
+                        if(imgDB[key].file ===ctnDB[i].file){
+                                num++; } %>
+                <%}%>
+                <% for (var y in likes) {
+                        if(imgDB[key].file ===likes[y].file){
+                                thumb = likes[y].thumb; } %>
+                <%}%>
+                <div class="img-content clearfix">
+                    <span class="pull-left"> From <%= imgDB[key].user%></span>
+                    <span class="pull-right"><%= num %> Comments
+                        <%= thumb%> Likes </span>
+                </div>
+
+        </div>
+    <%}%>
+</div>
+</body>
+</html>

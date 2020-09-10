@@ -1,0 +1,111 @@
+body,p,ul,li,input{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+.pull-left{
+    float:left;
+}
+.pull-right{
+    float:right;
+}
+.clearfix{
+    *zoom:1;
+}
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+    clear:both;
+}
+
+
+#home-header{
+    margin:0 auto;
+    width:500px;
+    height:60px;
+    border-bottom:1px gray solid;
+    /*border: 1px solid red;*/
+}
+#home-header #header-content{
+    margin:33px auto;
+    width:300px;
+    height:50px;
+    /*border:1px solid black;*/
+    text-align:center;
+}
+.main-container{
+    /*text-align:center;*/
+    padding-left:30px;
+    margin:50px auto;
+    width:1100px;
+    /*border:1px solid red;*/
+}
+.container{
+    margin-left:25px;
+    margin-right:25px;
+    margin-top:30px;
+    display:inline-block;
+    width:302px;
+    height:230px;
+    /*border:1px solid purple;*/
+}
+.image{
+    width:300px;
+    /*border:1px solid green;*/
+}
+.image-container{
+    display:inline-block;
+    width:300px;
+    /*border:2px solid red;*/
+}
+.img-content{
+    /*display:inline-block;*/
+    width:300px;
+    height:100px;
+    padding-top:10px;
+    /*text-align:center;*/
+    /*border:1px solid red;*/
+    font-size:12px;
+    color:gray;
+}
+/*profile page*/
+#profile-header{
+    /*border:1px solid red;*/
+    width:1100px;
+    margin:0 auto 10px;
+}
+#profile-header-content{
+    /*border:1px solid red;*/
+    text-align:center;
+    width:500px;
+    margin-top:30px;
+    margin-left:300px;
+    border-bottom: 1px gray solid;
+}
+#logOut{
+    margin-top:50px;
+    margin-right:30px;
+}
+#logIn-container{
+    width:300px;
+    height:200px;
+    margin:200px auto;
+    text-align:center;
+}
+#singUp-container{
+    width:300px;
+    height:300px;
+    margin:200px auto;
+    text-align:center;
+}
+#signUp-table{
+    text-align:right;
+    width:250px;
+}
